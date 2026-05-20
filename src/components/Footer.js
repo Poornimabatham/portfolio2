@@ -10,7 +10,7 @@ const Footer = () => {
           </p>
           <p>
             Made with ❤️ by{" "}
-            <a href="https://github.com/Poornimabatham" target="_blank">
+            <a href="https://github.com/Poornimabatham" target="_blank" rel="noreferrer">
               Poornimabatham
             </a>
           </p>
