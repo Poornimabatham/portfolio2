@@ -1,11 +1,11 @@
 import React from "react";
-
+import "../index.css";
 const Projects = () => {
   return (
     <div className="p-6 max-w-6xl mx-auto">
       {/* Heading */}
       <div className="flex items-center justify-center bg-gray-100 p-4 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 mb-6">
-        <h1 className="text-2xl  ">Projects</h1>
+        <h1 className="text-2xl tag-line ">Projects</h1>
       </div>
 
       {/* Projects Grid */}
