@@ -240,7 +240,12 @@ html {
 
 .tag-line {
   font-size: 24px;
-  margin-bottom: 20px;
-  color: black;
   font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #24c6dc, #514a9d);
+  color: white;
+}
+.bottom-border{
+  border-bottom: 4px solid white;
+  padding-bottom: 10px;
 }
