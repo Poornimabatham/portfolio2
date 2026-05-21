@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer class="footer bg-green-100 text-black p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 flex justify-center">
+      <footer class="footer bg-white text-black p-6 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 flex justify-center">
         <div class="footer-content ">
           <p>
             Thanks for visiting my portfolio! <span>😊</span>

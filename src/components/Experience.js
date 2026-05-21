@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <>
       <div id="experience" className="p-6 max-w-6xl mx-auto">
-        <h1 className="flex items-center justify-center bg-gray-100 p-3 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 mb-8">
+        <h1 className="flex items-center justify-center bg-gray-100 p-2 rounded-xl shadow-md hover:shadow-2xl transition-shadow   tag-line bottom-border duration-300 mb-8">
           Experience
         </h1>
 

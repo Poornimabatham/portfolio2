@@ -85,7 +85,10 @@ const Skills = () => {
 
   return (
     <div className="p-6 max-w-6xl mx-auto">
-      <h1 className="flex items-center justify-center bg-gray-100 p-3 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 text-2xl  mb-8">
+      <h1
+        className="flex items-center justify-center
+       bg-gray-100 p-2 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 text-2xl  mb-8 tag-line bottom-border"
+      >
         Skills
       </h1>
 
