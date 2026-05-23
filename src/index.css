@@ -106,16 +106,7 @@ body{
   gap: 10px;
 }
 
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* Creates three equal columns */
-  padding: 20px;
-  background-color: #e08bea;
-  /* Example background color */
-  color: white;
-  /* Example text color */
-}
+
 
 .footer-column {
   padding: 10px;
@@ -248,4 +239,29 @@ html {
 .bottom-border{
   border-bottom: 4px solid white;
   padding-bottom: 10px;
+}
+/* Hide Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Carousel Animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 12s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
 }

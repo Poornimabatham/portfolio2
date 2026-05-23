@@ -37,9 +37,7 @@ function App() {
       <div id="projects" data-aos="fade-up">
         <Projects />
       </div>
-      <div id="footer" data-aos="fade-up">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

@@ -59,11 +59,11 @@ const Experience = () => {
   };
 
   return (
-    <div id="experience" className="p-6 max-w-5xl mx-auto">
+    <div id="experience" className="p-6 max-w-5xl mx-auto ">
       {/* Heading */}
       <h1
         className="flex items-center justify-center bg-gray-100 p-2 rounded-xl
-        shadow-md hover:shadow-2xl transition-shadow duration-300 mb-8"
+        shadow-md hover:shadow-2xl transition-shadow duration-300 mb-8 tag-line bottom-border "
       >
         Experience
       </h1>
@@ -83,11 +83,11 @@ const Experience = () => {
           className="w-full bg-black text-white p-6 rounded-2xl shadow-xl
           transition-all duration-500 border border-white"
         >
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl   text-white font-bold mb-2">
             {experiences[currentIndex].title}
           </h2>
 
-          <p className="italic text-gray-300 mb-2">
+          <p className="italic text-gray-300 mb-2 ">
             ({experiences[currentIndex].company})
           </p>
 
