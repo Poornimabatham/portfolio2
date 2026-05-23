@@ -17,11 +17,17 @@ const HeroSection = () => {
           className="mt-4 mb-9 
          text-medium leading-relaxed "
         >
-          With over 2 years of experience in the field of development,
-          accompanied by a bachelor's degree in engineering. Proficient in
-          backend development, API testing, frontend technologies, and adaptable
-          to learning new skills. Demonstrated success in leading impactful
-          projects. Actively working with Node.js for backend projects.
+          Full Stack Developer with 3 years of experience building scalable web
+          applications using modern frontend and back-end technologies.
+          Expertise in Node.js, React, Angular, and microservices architecture,
+          with a strong focus on performance optimization, secure APIs, and
+          seamless third-party integrations. Proven ability to deliver
+          high-quality solutions in agile environments. With over 2 years of
+          experience in the field of development, accompanied by a bachelor's
+          degree in engineering. Proficient in backend development, API testing,
+          frontend technologies, and adaptable to learning new skills.
+          Demonstrated success in leading impactful projects. Actively working
+          with Node.js for backend projects.
         </p>
       </div>
     </div>
