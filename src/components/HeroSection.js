@@ -1,4 +1,6 @@
 import React from "react";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 
 const HeroSection = () => {
   return (
@@ -24,6 +26,44 @@ const HeroSection = () => {
           seamless third-party integrations. Proven ability to deliver
           high-quality solutions in agile environments
         </p>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://github.com/poornima-batham"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="text-white text-2xl hover:text-gray-400 transition-colors" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/poornima-batham"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="text-white text-2xl hover:text-blue-400 transition-colors" />
+          </a>
+          <a
+            href="https://www.facebook.com/poornima.batham"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className="text-white text-2xl hover:text-blue-500 transition-colors" />
+          </a>
+          <button
+            className="text-white text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity"
+            style={{ borderWidth: "2px", borderStyle: "solid", borderColor: "#24c6dc" }}
+          >
+            Contact me
+          </button>
+          <a
+            href="/resume.pdf"
+            download="Poornima_Batham_Resume.pdf"
+            className="flex items-center gap-2 text-black text-sm px-4 py-2 rounded-lg hover:opacity-80 transition-opacity"
+            style={{ border: "2px solid white", background: "#24c6dc" }}
+          >
+            <FiDownload />
+            Get Resume
+          </a>
+        </div>
       </div>
     </div>
   );
