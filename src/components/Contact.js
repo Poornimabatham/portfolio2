@@ -1,18 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaFacebook, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
+import GlowCard from "./GlowCard";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [glowPos, setGlowPos] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-  const cardRef = useRef(null);
-
-  const handleMouseMove = (e) => {
-    const rect = cardRef.current.getBoundingClientRect();
-    setGlowPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -33,40 +26,7 @@ const Contact = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         {/* Left - Form */}
-        <div
-          ref={cardRef}
-          onMouseMove={handleMouseMove}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          className="text-white p-6 rounded-xl"
-          style={{
-            position: "relative",
-            background: "#000",
-            borderRadius: "12px",
-            border: "1px solid #334155",
-            overflow: "hidden",
-            boxShadow: isHovered ? `0 0 25px 4px #24c6dc44` : "none",
-            transition: "box-shadow 0.3s ease",
-          }}
-        >
-          {/* Mouse glow border */}
-          {isHovered && (
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                borderRadius: "12px",
-                pointerEvents: "none",
-                background: `radial-gradient(350px circle at ${glowPos.x}px ${glowPos.y}px, #24c6dcaa, transparent 70%)`,
-                border: "2px solid transparent",
-                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                WebkitMaskComposite: "xor",
-                maskComposite: "exclude",
-                padding: "2px",
-                zIndex: 10,
-              }}
-            />
-          )}
+        <GlowCard className="text-white p-6" style={{ background: "#000" }}>
           <p className="text-sm text-gray-300 mb-6">
             If you have any questions or concerns, please don't hesitate to contact me.
             I am open to any work opportunities that align with my skills and interests.
@@ -120,11 +80,10 @@ const Contact = () => {
               SEND MESSAGE <FiSend />
             </button>
           </form>
-        </div>
+        </GlowCard>
 
         {/* Right - Contact Info */}
         <div className="flex flex-col justify-center gap-6 px-4">
-          {/* Email */}
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#1e293b" }}>
               <MdEmail className="text-cyan-400 text-xl" />
@@ -132,7 +91,6 @@ const Contact = () => {
             <span className="text-white text-sm">poornimabatham@gmail.com</span>
           </div>
 
-          {/* Phone */}
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#1e293b" }}>
               <FaPhone className="text-cyan-400 text-lg" />
@@ -140,7 +98,6 @@ const Contact = () => {
             <span className="text-white text-sm">+91 XXXXXXXXXX</span>
           </div>
 
-          {/* Address */}
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#1e293b" }}>
               <FaMapMarkerAlt className="text-cyan-400 text-lg" />
@@ -148,7 +105,6 @@ const Contact = () => {
             <span className="text-white text-sm">Gwalior, Madhya Pradesh, India</span>
           </div>
 
-          {/* Social Icons */}
           <div className="flex gap-4 mt-2">
             {[
               { icon: <FaGithub />, href: "https://github.com/Poornimabatham" },

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import GlowCard from "./GlowCard";
 
 const Experience = () => {
   const experiences = [
@@ -75,10 +76,7 @@ const Experience = () => {
         </button>
 
         {/* Card */}
-        <div
-          className="w-full bg-black text-white p-6 rounded-2xl shadow-xl
-          transition-all duration-500 border border-white"
-        >
+        <GlowCard style={{ background: "black", width: "100%" }} className="text-white p-6">
           <h2 className="text-2xl   text-white font-bold mb-2">
             {experiences[currentIndex].title}
           </h2>
@@ -100,7 +98,7 @@ const Experience = () => {
               <li key={index}>{item}</li>
             ))}
           </ul>
-        </div>
+        </GlowCard>
 
         {/* Right Arrow */}
         <button
