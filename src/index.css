@@ -141,7 +141,6 @@ body{
 }
 
 form {
-  background-color: red;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -265,3 +264,5 @@ html {
 .carousel-track:hover {
   animation-play-state: paused;
 }
+
+/* Running Border Effect - replaced by mouse tracking in Contact.js */
