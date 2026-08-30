@@ -71,9 +71,34 @@ const ExpenseMockup = () => (
   </div>
 );
 
+const SocialCarouselMockup = () => (
+  <div className="w-full h-32 rounded-md mb-3 overflow-hidden" style={{ background: "linear-gradient(135deg, #1a1a2e, #16213e)" }}>
+    <div className="flex items-center justify-between px-3 py-1" style={{ backgroundColor: "#e1306c" }}>
+      <span style={{ color: "white", fontSize: "0.6rem", fontWeight: "700", letterSpacing: "1px" }}>📸 Socially</span>
+      <div className="flex gap-1">
+        <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#f87171" }}></div>
+        <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#fbbf24" }}></div>
+        <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#34d399" }}></div>
+      </div>
+    </div>
+    <div className="flex gap-2 px-3 pt-2">
+      {[{ label: "Posts", val: "128", color: "#e1306c" }, { label: "Followers", val: "4.2k", color: "#a78bfa" }, { label: "Likes", val: "9.8k", color: "#f87171" }].map((s) => (
+        <div key={s.label} className="flex-1 rounded p-1 text-center" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
+          <div style={{ color: s.color, fontSize: "0.75rem", fontWeight: "800" }}>{s.val}</div>
+          <div style={{ color: "#9ca3af", fontSize: "0.45rem" }}>{s.label}</div>
+        </div>
+      ))}
+    </div>
+    <div className="px-3 pt-2 flex gap-2">
+      {["#e1306c", "#a78bfa", "#34d399", "#fbbf24"].map((color, i) => (
+        <div key={i} style={{ width: 36, height: 36, borderRadius: 6, backgroundColor: color, opacity: 0.7 }} />
+      ))}
+    </div>
+  </div>
+);
+
 const projectCards = [
   {
-    id: 1,
     bg: "bg-black",
     content: <img src="https://newportal.ubiattendance.com/assets/img/newlogo.png" alt="Attendance App" className="w-full h-32 object-contain rounded-md mb-3" />,
     label: "Attendance App",
@@ -140,6 +165,38 @@ const projectCards = [
     label: "Expense Tracker",
     labelColor: "text-white",
     link: "https://expense-tracker-frontend-sigma-red.vercel.app/expenses",
+  },
+  {
+    id: 7,
+    bg: "bg-gray-900",
+    content: (
+      <div className="w-full h-32 rounded-md mb-3 overflow-hidden" style={{ background: "linear-gradient(135deg, #1a1a2e, #16213e)" }}>
+        <div className="flex items-center justify-between px-3 py-1" style={{ backgroundColor: "#e1306c" }}>
+          <span style={{ color: "white", fontSize: "0.6rem", fontWeight: "700", letterSpacing: "1px" }}>📸 Socially</span>
+          <div className="flex gap-1">
+            <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#f87171" }}></div>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#fbbf24" }}></div>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#34d399" }}></div>
+          </div>
+        </div>
+        <div className="flex gap-2 px-3 pt-2">
+          {[{ label: "Posts", val: "128", color: "#e1306c" }, { label: "Followers", val: "4.2k", color: "#a78bfa" }, { label: "Likes", val: "9.8k", color: "#f87171" }].map((s) => (
+            <div key={s.label} className="flex-1 rounded p-1 text-center" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
+              <div style={{ color: s.color, fontSize: "0.75rem", fontWeight: "800" }}>{s.val}</div>
+              <div style={{ color: "#9ca3af", fontSize: "0.45rem" }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+        <div className="px-3 pt-2 flex gap-2">
+          {["#e1306c", "#a78bfa", "#34d399", "#fbbf24"].map((color, i) => (
+            <div key={i} style={{ width: 36, height: 36, borderRadius: 6, backgroundColor: color, opacity: 0.7 }} />
+          ))}
+        </div>
+      </div>
+    ),
+    label: "Social Carousel App",
+    labelColor: "text-white",
+    link: "https://socially-approved-carosel-frontend.vercel.app/",
   },
 ];
 
