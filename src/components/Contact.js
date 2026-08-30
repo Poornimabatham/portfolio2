@@ -88,7 +88,7 @@ const Contact = () => {
             <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#1e293b" }}>
               <MdEmail className="text-cyan-400 text-xl" />
             </div>
-            <span className="text-white text-sm">poornimabatham@gmail.com</span>
+            <span className="text-white text-sm">pbatham21@gmail.com</span>
           </div>
 
           <div className="flex items-center gap-4">
