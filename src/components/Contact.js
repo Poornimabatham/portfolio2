@@ -95,7 +95,7 @@ const Contact = () => {
             <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#1e293b" }}>
               <FaPhone className="text-cyan-400 text-lg" />
             </div>
-            <span className="text-white text-sm">+91 XXXXXXXXXX</span>
+            <span className="text-white text-sm">+91 9329026509</span>
           </div>
 
           <div className="flex items-center gap-4">

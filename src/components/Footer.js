@@ -46,9 +46,9 @@ const Footer = () => {
           {/* Col 3 - Contact & Socials */}
           <div className="flex flex-col gap-3">
             <h3 className="text-sm font-semibold text-gray-300 mb-1 tracking-widest uppercase">Connect</h3>
-            <a href="mailto:poornimabatham@gmail.com" className="flex items-center gap-2 text-gray-400 text-sm hover:text-cyan-400 transition-colors">
-              <MdEmail /> poornimabatham@gmail.com
-            </a>
+            <a href="mailto:pbatham21@gmail.com" className="flex items-center gap-2 text-gray-400 text-sm hover:text-cyan-400 transition-colors">
+              <MdEmail /> pbatham21@gmail.com
+            </a>``
             <div className="flex gap-4 mt-2">
               {[
                 { icon: <FaGithub />, href: "https://github.com/Poornimabatham" },
