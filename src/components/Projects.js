@@ -3,7 +3,6 @@ import "../index.css";
 
 const EmployeeMockup = () => (
   <div className="w-full h-32 rounded-md mb-3 overflow-hidden" style={{ background: "linear-gradient(135deg, #1e3a5f, #0f2027)" }}>
-    {/* Top bar */}
     <div className="flex items-center justify-between px-3 py-1" style={{ backgroundColor: "#1a56db" }}>
       <span style={{ color: "white", fontSize: "0.6rem", fontWeight: "700", letterSpacing: "1px" }}>👥 EMS Dashboard</span>
       <div className="flex gap-1">
@@ -12,7 +11,6 @@ const EmployeeMockup = () => (
         <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#34d399" }}></div>
       </div>
     </div>
-    {/* Stats row */}
     <div className="flex gap-2 px-3 pt-2">
       {[{ label: "Employees", val: "124", color: "#3b82f6" }, { label: "Active", val: "98", color: "#10b981" }, { label: "Leave", val: "12", color: "#f59e0b" }].map((s) => (
         <div key={s.label} className="flex-1 rounded p-1 text-center" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
@@ -21,7 +19,6 @@ const EmployeeMockup = () => (
         </div>
       ))}
     </div>
-    {/* Employee rows */}
     <div className="px-3 pt-2 flex flex-col gap-1">
       {["Alice Johnson", "Bob Smith"].map((name) => (
         <div key={name} className="flex items-center gap-2">
@@ -38,7 +35,6 @@ const EmployeeMockup = () => (
 
 const ExpenseMockup = () => (
   <div className="w-full h-32 rounded-md mb-3 overflow-hidden" style={{ background: "linear-gradient(135deg, #0f2027, #1a1a2e)" }}>
-    {/* Top bar */}
     <div className="flex items-center justify-between px-3 py-1" style={{ backgroundColor: "#7c3aed" }}>
       <span style={{ color: "white", fontSize: "0.6rem", fontWeight: "700", letterSpacing: "1px" }}>💰 Expense Tracker</span>
       <div className="flex gap-1">
@@ -47,7 +43,6 @@ const ExpenseMockup = () => (
         <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#34d399" }}></div>
       </div>
     </div>
-    {/* Stats row */}
     <div className="flex gap-2 px-3 pt-2">
       {[{ label: "Total", val: "₹24k", color: "#a78bfa" }, { label: "Income", val: "₹40k", color: "#34d399" }, { label: "Spent", val: "₹16k", color: "#f87171" }].map((s) => (
         <div key={s.label} className="flex-1 rounded p-1 text-center" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
@@ -56,7 +51,6 @@ const ExpenseMockup = () => (
         </div>
       ))}
     </div>
-    {/* Expense bars */}
     <div className="px-3 pt-2 flex flex-col gap-1">
       {[{ name: "Food", pct: "70%", color: "#f87171" }, { name: "Travel", pct: "45%", color: "#fbbf24" }].map((e) => (
         <div key={e.name} className="flex items-center gap-2">
@@ -97,8 +91,41 @@ const SocialCarouselMockup = () => (
   </div>
 );
 
+const SmartLearningMockup = () => (
+  <div className="w-full h-32 rounded-md mb-3 overflow-hidden" style={{ background: "linear-gradient(135deg, #0f2027, #1a3a2e)" }}>
+    <div className="flex items-center justify-between px-3 py-1" style={{ backgroundColor: "#16a34a" }}>
+      <span style={{ color: "white", fontSize: "0.6rem", fontWeight: "700", letterSpacing: "1px" }}>🎓 Smart Learning</span>
+      <div className="flex gap-1">
+        <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#f87171" }}></div>
+        <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#fbbf24" }}></div>
+        <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#34d399" }}></div>
+      </div>
+    </div>
+    <div className="flex gap-2 px-3 pt-2">
+      {[{ label: "Courses", val: "24", color: "#34d399" }, { label: "Students", val: "1.2k", color: "#60a5fa" }, { label: "Lessons", val: "180", color: "#fbbf24" }].map((s) => (
+        <div key={s.label} className="flex-1 rounded p-1 text-center" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
+          <div style={{ color: s.color, fontSize: "0.75rem", fontWeight: "800" }}>{s.val}</div>
+          <div style={{ color: "#9ca3af", fontSize: "0.45rem" }}>{s.label}</div>
+        </div>
+      ))}
+    </div>
+    <div className="px-3 pt-2 flex flex-col gap-1">
+      {[{ name: "React", pct: "85%", color: "#60a5fa" }, { name: "Node", pct: "60%", color: "#34d399" }].map((e) => (
+        <div key={e.name} className="flex items-center gap-2">
+          <span style={{ color: "#9ca3af", fontSize: "0.45rem", width: 24 }}>{e.name}</span>
+          <div style={{ flex: 1, height: 5, borderRadius: 4, backgroundColor: "rgba(255,255,255,0.1)" }}>
+            <div style={{ width: e.pct, height: "100%", borderRadius: 4, backgroundColor: e.color }}></div>
+          </div>
+          <span style={{ color: "white", fontSize: "0.45rem" }}>{e.pct}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const projectCards = [
   {
+    id: 1,
     bg: "bg-black",
     content: <img src="https://newportal.ubiattendance.com/assets/img/newlogo.png" alt="Attendance App" className="w-full h-32 object-contain rounded-md mb-3" />,
     label: "Attendance App",
@@ -173,6 +200,14 @@ const projectCards = [
     label: "Social Carousel App",
     labelColor: "text-white",
     link: "https://socially-approved-carosel-frontend.vercel.app/",
+  },
+  {
+    id: 8,
+    bg: "bg-gray-900",
+    content: <SmartLearningMockup />,
+    label: "Smart Learning Adventure",
+    labelColor: "text-white",
+    link: "https://smart-learning-adventure.onrender.com/login",
   },
 ];
 
