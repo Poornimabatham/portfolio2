@@ -207,7 +207,7 @@ const projectCards = [
     content: <SmartLearningMockup />,
     label: "Smart Learning Adventure",
     labelColor: "text-white",
-    link: "https://smart-learning-adventure.onrender.com/login",
+    link: "https://smart-learning-adventure.onrender.com",
   },
 ];
 
